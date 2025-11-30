@@ -1,0 +1,839 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Fish">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="这是文章的摘要描述">
+<meta property="og:type" content="article">
+<meta property="og:title" content="zfile介绍与安装.">
+<meta property="og:url" content="http://example.com/2025/11/30/zfile%E4%BB%8B%E7%BB%8D%E4%B8%8E%E5%AE%89%E8%A3%85/index.html">
+<meta property="og:site_name" content="Fish&#39;blog">
+<meta property="og:description" content="这是文章的摘要描述">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-11-30T04:20:00.000Z">
+<meta property="article:modified_time" content="2025-11-30T04:26:40.795Z">
+<meta property="article:author" content="Fish">
+<meta property="article:tag" content="Hexo">
+<meta property="article:tag" content="zflie">
+<meta property="article:tag" content="教程">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>zfile介绍与安装. - Fish&#39;blog</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 8.0.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Fish&#39;blog</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/" target="_self">
+                <i class="iconfont icon-link-fill"></i>
+                <span>友链</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="zfile介绍与安装."></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2025-11-30 12:20" pubdate>
+          2025年11月30日 中午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          2.1k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          18 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">zfile介绍与安装.</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <p>今天为你带来一篇关于ZFile开源网盘从介绍到安装的详细指南。无论你是想要一个私人的文件库，还是希望分享工具给朋友，ZFile都能满足你的需求。</p>
+<h1 id="🔧-构建个人云存储：ZFile开源网盘安装指南"><a href="#🔧-构建个人云存储：ZFile开源网盘安装指南" class="headerlink" title="🔧 构建个人云存储：ZFile开源网盘安装指南"></a>🔧 构建个人云存储：ZFile开源网盘安装指南</h1><blockquote>
+<p>在数字化时代，拥有一个属于自己的私有网盘，既能保障数据安全，又能摆脱商业网盘的各种限制。今天，我们就来一起部署一款开源、美观、功能强大的网盘系统——ZFile。</p>
+</blockquote>
+<h2 id="✨-ZFile-简介与特色功能"><a href="#✨-ZFile-简介与特色功能" class="headerlink" title="✨ ZFile 简介与特色功能"></a>✨ ZFile 简介与特色功能</h2><p>ZFile 是一个基于 Java 的在线文件目录程序，支持多种存储方式，定位是个人存放常用工具下载，或做公共的文件库。</p>
+<h3 id="核心特色"><a href="#核心特色" class="headerlink" title="核心特色"></a>核心特色</h3><ul>
+<li><strong>多存储源支持</strong>：不仅支持<strong>本地存储</strong>，还兼容多种对象存储服务，包括但不限于 <strong>OneDrive</strong>、<strong>阿里云 OSS</strong>、<strong>腾讯云 COS</strong>、<strong>七牛云 Kodo</strong>、<strong>又拍云 USS</strong>、<strong>FTP</strong> 等。</li>
+<li><strong>丰富的文件预览功能</strong>：支持在线预览文本、图片、音频、视频（支持 FLV 和 HLS），以及 <strong>PDF</strong> 和 <strong>Office</strong> 文档（Word、Excel、PowerPoint）。</li>
+<li><strong>免安装嵌入式数据库</strong>：默认使用 <strong>H2</strong> 嵌入式数据库，无需额外安装数据库服务即可运行。</li>
+<li><strong>直链分享</strong>：可以为文件生成直链，方便分享。</li>
+<li><strong>文件夹密码保护</strong>：可以为特定文件夹设置密码，增强私密性。</li>
+<li><strong>自定义配置</strong>：支持通过 <code>header.md</code> 和 <code>footer.md</code> 文件自定义目录的页眉页脚说明，也支持自定义 CSS 和 JS。</li>
+<li><strong>文件&#x2F;目录二维码</strong>：可以快速生成文件或目录的二维码，方便移动端访问。</li>
+</ul>
+<p>与一些其他网盘系统不同，ZFile <strong>不会向多账户方向开发</strong>，其代码结构保持相对简单，非常适合<strong>个人使用</strong>而非搭建多人网盘。</p>
+<h2 id="📦-安装准备"><a href="#📦-安装准备" class="headerlink" title="📦 安装准备"></a>📦 安装准备</h2><p>在开始安装之前，你需要准备：</p>
+<ul>
+<li><strong>一台云服务器</strong>：Linux 系统，推荐 <strong>CentOS</strong> 或 <strong>Ubuntu</strong>。</li>
+<li><strong>基础工具</strong>：确保系统已安装 <code>wget</code> 或 <code>curl</code> 等工具。</li>
+<li><strong>网络环境</strong>：服务器需要能正常访问互联网。</li>
+</ul>
+<h2 id="🛠️-安装依赖"><a href="#🛠️-安装依赖" class="headerlink" title="🛠️ 安装依赖"></a>🛠️ 安装依赖</h2><p>ZFile 基于 Java 开发，运行需要 <strong>JDK 1.8</strong> 或更高版本。我们将针对常见的 Ubuntu 系统进行安装。</p>
+<h3 id="Ubuntu-Debian-系统"><a href="#Ubuntu-Debian-系统" class="headerlink" title="Ubuntu &#x2F; Debian 系统"></a>Ubuntu &#x2F; Debian 系统</h3><p>更新软件包列表并安装 OpenJDK 8：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> apt-get update<br><span class="hljs-built_in">sudo</span> apt-get install openjdk-8-jdk unzip -y<br></code></pre></td></tr></table></figure>
+<p><em>如果系统没有预装 <code>unzip</code>，上述命令也已一并安装。</em></p>
+<p><strong>验证安装</strong>：<br>安装完成后，可以通过以下命令检查 Java 版本，确认安装成功：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">java -version<br></code></pre></td></tr></table></figure>
+<p>如果正确显示 Java 版本信息（如 <code>openjdk version &quot;1.8.0_xxx&quot;</code>），则说明依赖安装成功。</p>
+<h2 id="📥-下载与安装-ZFile"><a href="#📥-下载与安装-ZFile" class="headerlink" title="📥 下载与安装 ZFile"></a>📥 下载与安装 ZFile</h2><h3 id="全新安装-以-Linux-amd64-架构为例"><a href="#全新安装-以-Linux-amd64-架构为例" class="headerlink" title="全新安装 (以 Linux amd64 架构为例)"></a>全新安装 (以 Linux amd64 架构为例)</h3><ol>
+<li><p><strong>设置安装路径并下载</strong><br>这里我们选择将 ZFile 安装到用户目录下的 <code>zfile</code> 文件夹中。自 4.2.0 版本开始，ZFile 开源版的部署方式有所变化，提供了针对不同架构的预编译包。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 声明安装路径并创建目录</span><br><span class="hljs-built_in">export</span> ZFILE_INSTALL_PATH=~/zfile<br><span class="hljs-built_in">mkdir</span> -p <span class="hljs-variable">$ZFILE_INSTALL_PATH</span> &amp;&amp; <span class="hljs-built_in">cd</span> <span class="hljs-variable">$ZFILE_INSTALL_PATH</span><br><br><span class="hljs-comment"># 下载 ZFile (请根据你的服务器架构选择，通常为 amd64)</span><br><span class="hljs-comment"># 对于 amd64 架构：</span><br>wget --no-check-certificate https://c.jun6.net/ZFILE/zfile-release_linux_amd64.tar.gz<br><br><span class="hljs-comment"># 对于 arm64 架构：</span><br><span class="hljs-comment"># wget --no-check-certificate https://c.jun6.net/ZFILE/zfile-release_linux_arm64.tar.gz</span><br></code></pre></td></tr></table></figure>
+</li>
+<li><p><strong>解压与授权</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 解压下载的压缩包 (请根据你下载的文件名调整)</span><br>tar -zxvf zfile-release_linux_amd64.tar.gz<br><span class="hljs-comment"># 删除压缩包</span><br><span class="hljs-built_in">rm</span> -rf zfile-release_linux_amd64.tar.gz<br><span class="hljs-comment"># 为启动停止脚本授予执行权限</span><br><span class="hljs-built_in">chmod</span> +x <span class="hljs-variable">$ZFILE_INSTALL_PATH</span>/bin/*.sh<br></code></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="🚀-运行与初始化"><a href="#🚀-运行与初始化" class="headerlink" title="🚀 运行与初始化"></a>🚀 运行与初始化</h2><h3 id="启动-ZFile"><a href="#启动-ZFile" class="headerlink" title="启动 ZFile"></a>启动 ZFile</h3><p>使用以下命令启动 ZFile：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">~/zfile/bin/start.sh<br></code></pre></td></tr></table></figure>
+<p>启动成功后，你将看到类似以下的输出：</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">Starting</span> the zfile-<span class="hljs-number">4</span>.<span class="hljs-number">1</span>.<span class="hljs-number">5</span> ...OK!<br><span class="hljs-attribute">PID</span>: <span class="hljs-number">29872</span><br></code></pre></td></tr></table></figure>
+<p><em>注意：如果你修改了默认的安装路径 (<code>$ZFILE_INSTALL_PATH</code>)，请使用你自定义的路径。</em></p>
+<h3 id="访问并初始化"><a href="#访问并初始化" class="headerlink" title="访问并初始化"></a>访问并初始化</h3><ol>
+<li><p><strong>访问网盘</strong>：<br>打开你的浏览器，输入 <code>http://你的服务器IP:8080</code>。如果页面正常打开，说明 ZFile 已成功启动。</p>
+<p><strong>无法访问？</strong></p>
+<ul>
+<li><strong>检查服务状态</strong>：在服务器上执行 <code>curl http://127.0.0.1:8080</code>。如果返回 HTML 代码，则服务正常；如果返回 <code>Connection refused</code>，则启动失败。</li>
+<li><strong>检查防火墙&#x2F;安全组</strong>：确保你的云服务器安全组规则以及系统防火墙（如 <code>ufw</code> 或 <code>firewalld</code>）已放行 <strong>8080</strong> 端口。</li>
+</ul>
+</li>
+<li><p><strong>初始化安装</strong>：<br>首次访问，系统会自动引导你进入初始化页面（地址为 <code>http://你的服务器IP:8080/#/install</code>）。</p>
+<ul>
+<li>在此页面，你需要设置<strong>站点名称</strong>、<strong>管理员账号</strong>（邮箱）和<strong>密码</strong>。</li>
+<li>提交后，系统会初始化数据库和管理员账户。</li>
+</ul>
+</li>
+<li><p><strong>登录与管理</strong>：</p>
+<ul>
+<li>初始化完成后，你可以通过 <code>http://你的服务器IP:8080/#/admin</code> 访问管理后台。</li>
+<li>使用刚才设置的管理员账号和密码登录。</li>
+</ul>
+</li>
+</ol>
+<h3 id="配置存储源"><a href="#配置存储源" class="headerlink" title="配置存储源"></a>配置存储源</h3><p>登录管理后台后，核心操作就是配置存储源，这样才能管理和访问你的文件。</p>
+<ol>
+<li>在管理后台，找到 <strong>“存储策略”</strong> 或 <strong>“驱动器”</strong> 管理。</li>
+<li>点击 <strong>“新增”</strong>，选择一个存储策略，例如我们先从 <strong>“本地存储”</strong> 开始。</li>
+<li>根据指引配置存储源：<ul>
+<li><strong>存储策略名称</strong>：为你这个存储源起个名字，如 “我的本地文件”。</li>
+<li><strong>路径 Key</strong>：这在访问时会用到。</li>
+<li><strong>文件路径</strong>：填写服务器上的一个绝对路径（例如 <code>/data/file</code>），ZFile 将在此路径下存取文件。请确保该目录存在且 ZFile 进程有读写权限。</li>
+</ul>
+</li>
+<li>保存配置。</li>
+</ol>
+<p>现在，你可以通过前台地址 (<code>http://你的服务器IP:8080/#/main</code>) 访问你的网盘，并看到你配置的存储源了。</p>
+<h2 id="📝-常用管理命令"><a href="#📝-常用管理命令" class="headerlink" title="📝 常用管理命令"></a>📝 常用管理命令</h2><p>掌握以下命令，方便管理 ZFile 服务：</p>
+<ul>
+<li><strong>启动</strong>：<code>~/zfile/bin/start.sh</code></li>
+<li><strong>停止</strong>：<code>~/zfile/bin/stop.sh</code></li>
+<li><strong>重启</strong>：<code>~/zfile/bin/restart.sh</code></li>
+</ul>
+<h2 id="🔄-更新版本"><a href="#🔄-更新版本" class="headerlink" title="🔄 更新版本"></a>🔄 更新版本</h2><p>当有新版本发布时，你可以按照以下步骤更新（<strong>更新前务必停止服务并备份数据</strong>）：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 进入安装目录，停止服务</span><br>~/zfile/bin/stop.sh<br><br><span class="hljs-comment"># 声明安装路径 (如果你修改过，请保持一致)</span><br><span class="hljs-built_in">export</span> ZFILE_INSTALL_PATH=~/zfile<br><br><span class="hljs-comment"># 删除旧的程序文件 (注意：此操作不会删除你的配置文件和数据文件)</span><br><span class="hljs-built_in">rm</span> -rf <span class="hljs-variable">$ZFILE_INSTALL_PATH</span><br><br><span class="hljs-comment"># 然后，重复前面 &quot;下载与安装 ZFile&quot; 的步骤，重新下载并解压最新版本</span><br><span class="hljs-built_in">mkdir</span> -p <span class="hljs-variable">$ZFILE_INSTALL_PATH</span> &amp;&amp; <span class="hljs-built_in">cd</span> <span class="hljs-variable">$ZFILE_INSTALL_PATH</span><br>wget --no-check-certificate https://c.jun6.net/ZFILE/zfile-release_linux_amd64.tar.gz<br>tar -zxvf zfile-release_linux_amd64.tar.gz<br><span class="hljs-built_in">rm</span> -rf zfile-release_linux_amd64.tar.gz<br><span class="hljs-built_in">chmod</span> +x <span class="hljs-variable">$ZFILE_INSTALL_PATH</span>/bin/*.sh<br><br><span class="hljs-comment"># 启动新版本</span><br>~/zfile/bin/start.sh<br></code></pre></td></tr></table></figure>
+
+<h3 id="配置开机自启-Systemd"><a href="#配置开机自启-Systemd" class="headerlink" title="配置开机自启 (Systemd)"></a>配置开机自启 (Systemd)</h3><p>为了让 ZFile 在服务器重启后自动运行，可以配置 systemd 服务。</p>
+<ol>
+<li>创建服务文件，例如 <code>sudo vim /etc/systemd/system/zfile.service</code>。</li>
+<li>写入以下内容（请根据你的实际安装路径调整 <code>WorkingDirectory</code> 和 <code>ExecStart</code>）：<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs ini"><span class="hljs-section">[Unit]</span><br><span class="hljs-attr">Description</span>=ZFile Service<br><span class="hljs-attr">After</span>=network.target<br><br><span class="hljs-section">[Service]</span><br><span class="hljs-attr">Type</span>=forking<br><span class="hljs-attr">WorkingDirectory</span>=/root/zfile<br><span class="hljs-attr">ExecStart</span>=/root/zfile/bin/start.sh<br><span class="hljs-attr">ExecStop</span>=/root/zfile/bin/stop.sh<br><span class="hljs-attr">Restart</span>=<span class="hljs-literal">on</span>-abnormal<br><br><span class="hljs-section">[Install]</span><br><span class="hljs-attr">WantedBy</span>=multi-user.target<br></code></pre></td></tr></table></figure></li>
+<li>启用并启动服务：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> systemctl daemon-reload<br><span class="hljs-built_in">sudo</span> systemctl <span class="hljs-built_in">enable</span> zfile.service<br><span class="hljs-built_in">sudo</span> systemctl start zfile.service<br></code></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="使用-Nginx-反向代理"><a href="#使用-Nginx-反向代理" class="headerlink" title="使用 Nginx 反向代理"></a>使用 Nginx 反向代理</h3><p>如果你拥有域名，并希望通过域名访问 ZFile，同时隐藏端口号，可以使用 Nginx 做反向代理。</p>
+<ol>
+<li>安装 Nginx。</li>
+<li>添加一个站点配置文件，例如 <code>zfile.conf</code>：<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs nginx"><span class="hljs-section">server</span> &#123;<br>    <span class="hljs-attribute">listen</span> <span class="hljs-number">80</span>;<br>    <span class="hljs-attribute">server_name</span> your-domain.com; <span class="hljs-comment"># 替换为你的域名</span><br>    <br>    <span class="hljs-section">location</span> / &#123;<br>        <span class="hljs-attribute">proxy_set_header</span> Host <span class="hljs-variable">$host</span>;<br>        <span class="hljs-attribute">proxy_set_header</span> X-Real-IP <span class="hljs-variable">$remote_addr</span>;<br>        <span class="hljs-attribute">proxy_set_header</span> X-Forwarded-For <span class="hljs-variable">$proxy_add_x_forwarded_for</span>;<br>        <span class="hljs-attribute">proxy_pass</span> http://127.0.0.1:8080; <span class="hljs-comment"># 反向代理到 ZFile 服务</span><br>    &#125;<br>    <span class="hljs-comment"># 如果需要配置上传文件大小限制，可添加如下配置</span><br>    <span class="hljs-attribute">client_max_body_size</span> <span class="hljs-number">10G</span>;<br>&#125;<br></code></pre></td></tr></table></figure></li>
+<li>重新加载 Nginx 配置：<code>sudo nginx -s reload</code>。</li>
+</ol>
+<p>现在，你就可以通过域名 <code>http://your-domain.com</code> 访问你的 ZFile 网盘了。</p>
+<h2 id="💎-总结"><a href="#💎-总结" class="headerlink" title="💎 总结"></a>💎 总结</h2><p>通过以上步骤，你已经成功搭建了一个功能完备的个人网盘。ZFile 以其简洁的界面、强大的多存储源支持和丰富的文件预览功能，成为了个人文件管理的优秀解决方案。</p>
+<p><strong>核心要点回顾</strong>：</p>
+<ul>
+<li>安装依赖：重点是 <strong>JDK 1.8+</strong>。</li>
+<li>下载与安装：从官方源获取对应架构的预编译包。</li>
+<li>运行与初始化：通过 <code>start.sh</code> 启动，在网页端完成初始化配置。</li>
+<li>核心配置：在管理后台添加<strong>存储源</strong>。</li>
+<li>日常管理：使用 <code>start.sh</code>, <code>stop.sh</code>, <code>restart.sh</code> 脚本。</li>
+</ul>
+<p>现在，开始整理和分享你的文件吧！</p>
+<hr>
+<blockquote>
+<p>注意：本文基于 ZFile 官方文档及社区实践整理，具体操作请以官方最新文档为准。</p>
+</blockquote>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%8A%80%E6%9C%AF/" class="category-chain-item">技术</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/zflie/" class="print-no-link">#zflie</a>
+      
+        <a href="/tags/Hexo/" class="print-no-link">#Hexo</a>
+      
+        <a href="/tags/%E6%95%99%E7%A8%8B/" class="print-no-link">#教程</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>zfile介绍与安装.</div>
+      <div>http://example.com/2025/11/30/zfile介绍与安装/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>Fish</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2025年11月30日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2025/11/30/zfile/" title="zfile">
+                        <span class="hidden-mobile">zfile</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+
+  
+
+</div>
+
+  
+  
+    <!-- 备案信息 ICP for China -->
+    <div class="beian">
+  <span>
+    <a href="https://icp.gov.moe/?keyword=20252334" target="_blank" rel="nofollow noopener">
+      萌ICP备20252334号
+    </a>
+  </span>
+  
+</div>
+
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
